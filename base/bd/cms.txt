@@ -1,0 +1,57 @@
+HTML
+
+login
+home
+formulario
+lista
+404
+
+=====================
+BD
+
+TAG
+	1. ID
+	2. ID_Conetudo 
+	3. Valor
+
+conteudo
+	1. ID
+	2. ID_Instancia
+	3. Demais campos fixos
+
+conteudo extra
+	1. ID
+	2. ID_Conetudo 
+	3. ID_Instancia 
+	4. Valor
+
+tipo_usuario
+	1. ID
+	2. Tipo
+
+*(adm geral, adm cliente e usuario)
+
+usuario
+	1. ID
+	2. Login
+	3. Senha
+	4. foto
+
+instancias
+	1. ID
+	2. Nome
+
+instancias_usuario
+	1. ID_usuario
+	2. ID_instancia
+
+tipo_campo_extra
+	1. ID
+	2. Nome
+
+campo_extra
+	1. ID
+	2. ID_tipo_campo_extra
+	3. ID_Instancia 
+	4. Nome
+	
