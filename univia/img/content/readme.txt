@@ -1,1 +1,0 @@
-Bresa Framework - images content
