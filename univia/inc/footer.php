@@ -8,6 +8,7 @@
 	<script src="js/cycle.js"></script>
 	<script type="text/javascript" src="js/selectmenu.js"></script>
 	<script src="js/functions.js"></script>
+	<script src="js/maskedinput.js"></script>
 	<!-- script -->
 </body>
 </html>

@@ -29,38 +29,38 @@
 					<h2>Inscrições</h2>
 					<section class="sign">
 						<h3>Preencha os campos para fazer um pré-cadastro no curso desejado.</h3>
-						<form>
+						<form class="form-inscricoes" method="post" action="#">
 							<label>
 								<span class="name"></span>
-								<input class="clear-text error" type="text" value="Nome">
+								<input id="name" name="name" class="clear-text" type="text" value="Nome">
 							</label>
 							<label>
 								<span class="mail"></span>
-								<input class="clear-text error" type="text" value="E-mail">
+								<input id="mail" name="mail" class="clear-text" type="text" value="E-mail">
 							</label>
 							<label>
 								<span class="phone"></span>
-								<input class="clear-text error" type="text" value="Fone">
+								<input id="phone" name="phone" class="clear-text" type="text" value="Fone">
 							</label>
 							<label>
 								<span class="courses"></span>
-								<select name="Cidade" class="form-select">
-									<option value="Curso 01" class="whoo">Curso 01</option>
+								<select id="courses" name="courses" class="form-select">
+									<option value="Curso 01" selected="selected" class="whoo">Curso 01</option>
 									<option value="Curso 02">Curso 02</option>
-									<option value="Curso 03" selected="selected">Curso 03</option>
+									<option value="Curso 03">Curso 03</option>
 									<option value="Curso 04">Curso 04</option>
 									<option value="Curso 05">Curso 05</option>
 								</select>
 							</label>
 							<label>
 							<span class="comments">&nbsp;</span>
-								<textarea class="clear-text error">
+								<textarea id="comments" name="comments" class="clear-text">
 									&nbsp;
 								</textarea>
 							</label>
-							<input class="send-form" type="button" value="enviar">
+							<input class="send-form" type="submit" value="enviar">
 						</form>
-						<div class="send-sucess" style="display:none;">
+						<div class="send-sucess">
 							<p>Envio Confirmado</p>
 						</div>
 						<div class="send-error">
