@@ -45,7 +45,7 @@
 							<label>
 								<span class="courses"></span>
 								<select id="courses" name="courses" class="form-select">
-									<option value="Curso 01" selected="selected" class="whoo">Curso 01</option>
+									<option value="Curso 01" selected="selected">Escolha o Curso</option>
 									<option value="Curso 02">Curso 02</option>
 									<option value="Curso 03">Curso 03</option>
 									<option value="Curso 04">Curso 04</option>

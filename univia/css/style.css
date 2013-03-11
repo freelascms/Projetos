@@ -71,8 +71,8 @@ a:hover{}
 #content .sign-up .sign form {width:260px;margin:20px auto 0;}
 #content .sign-up .sign form label {float:left;position:relative;}
 #content .sign-up .sign form label input {width:230px;height:31px;margin:0 0 10px -10px;padding:0 10px 0 35px;color:#b7b7b7;font:12px 'verdana',sans-serif;background:url(../img/layout/bg-input.png) no-repeat right 0;border:none;float:left;resize:none;}
-#content .sign-up .sign form label input {color:#d80505;}
-#content .sign-up .sign form label textarea {color:#d80505!important;}
+#content .sign-up .sign form label input.error {color:#d80505;}
+#content .sign-up .sign form label textarea.error {color:#d80505;}
 #content .sign-up .sign form label .name {width:14px;height:14px;top:9px;left:3px;background:url(../img/layout/ico-forms.png) no-repeat;float:left;position:absolute;}
 #content .sign-up .sign form label .mail {width:14px;height:14px;top:11px;left:3px;background:url(../img/layout/ico-forms.png) no-repeat 0 -29px;float:left;position:absolute;}
 #content .sign-up .sign form label .phone {width:14px;height:14px;top:9px;left:3px;background:url(../img/layout/ico-forms.png) no-repeat 0 -54px;float:left;position:absolute;}
