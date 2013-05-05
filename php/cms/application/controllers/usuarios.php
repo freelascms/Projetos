@@ -19,7 +19,14 @@ class Usuarios extends CI_Controller {
 	 */
 	public function index()
 	{
+		// fazer a verificação de logado para carregar index ou login
+		
 		$this->load->view('usuarios/index');
+	}
+
+	public function login()
+	{
+		$this->load->view('usuarios/login');
 	}
 }
 

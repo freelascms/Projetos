@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Conteudo extends CI_Controller {
+class Welcome extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,12 +19,12 @@ class Conteudo extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('conteudo/lista');
+		$this->load->view('alunos/lista');
 	}
 
 	public function listar()
 	{
-		$this->load->view('conteudo/lista');
+		$this->load->view('alunos/lista');
 	}
 }
 

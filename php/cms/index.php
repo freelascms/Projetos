@@ -175,6 +175,13 @@ if (defined('ENVIRONMENT'))
 	// Name of the "system folder"
 	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
 
+	// Constantes de layout
+	define('LAYOUTPATH', 'assets/');
+	define('JSLAYOUTPATH', 'assets/js/');
+	define('CSSLAYOUTPATH', 'assets/css/');
+	define('IMGLAYOUTPATH', 'assets/img/');
+	define('INCLUDEPATH', 'assets/inc/');
+
 
 	// The path to the "application" folder
 	if (is_dir($application_folder))

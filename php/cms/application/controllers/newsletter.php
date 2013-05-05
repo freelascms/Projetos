@@ -19,7 +19,12 @@ class Newsletter extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('newsletter/index');
+		$this->load->view('newsletter/lista');
+	}
+
+	public function listar()
+	{
+		$this->load->view('newsletter/lista');
 	}
 }
 
