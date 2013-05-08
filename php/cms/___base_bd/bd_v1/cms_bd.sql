@@ -18,6 +18,21 @@ ENGINE = InnoDB;
 
 
 -- -----------------------------------------------------
+-- Table `cms_cmsv1`.`arquivos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cms_cmsv1`.`arquivos` ;
+
+CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`arquivos` (
+  `arq_id` INT NOT NULL AUTO_INCREMENT ,
+  `arq_nome` VARCHAR(300) NULL ,
+  `arq_tipo` VARCHAR(45) NULL ,
+  `arq_link` VARCHAR(300) NULL ,
+  `arq_dtcriacao` DATETIME NULL ,
+  PRIMARY KEY (`arq_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
 -- Table `cms_cmsv1`.`pessoas`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `cms_cmsv1`.`pessoas` ;
@@ -37,7 +52,13 @@ CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`pessoas` (
   `pes_telefone` VARCHAR(45) NULL ,
   `pes_celular` VARCHAR(45) NULL ,
   `pes_dtcriacao` DATETIME NULL ,
-  PRIMARY KEY (`pes_id`) )
+  `arquivos_arq_id` INT NOT NULL ,
+  PRIMARY KEY (`pes_id`) ,
+  CONSTRAINT `fk_pessoas_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `cms_cmsv1`.`arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -178,22 +199,13 @@ CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`parceiros` (
   `par_publicado` INT NULL ,
   `par_destaque` INT NULL ,
   `par_dtcriacao` DATETIME NULL ,
-  PRIMARY KEY (`par_id`) )
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `cms_cmsv1`.`arquivos`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cms_cmsv1`.`arquivos` ;
-
-CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`arquivos` (
-  `arq_id` INT NOT NULL AUTO_INCREMENT ,
-  `arq_nome` VARCHAR(300) NULL ,
-  `arq_tipo` VARCHAR(45) NULL ,
-  `arq_link` VARCHAR(300) NULL ,
-  `arq_dtcriacao` DATETIME NULL ,
-  PRIMARY KEY (`arq_id`) )
+  `arquivos_arq_id` INT NOT NULL ,
+  PRIMARY KEY (`par_id`) ,
+  CONSTRAINT `fk_parceiros_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `cms_cmsv1`.`arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -209,7 +221,7 @@ CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`destaque` (
   `des_dtcriacao` DATETIME NULL ,
   `des_publicado` INT NULL ,
   `des_destaque` INT NULL ,
-  `arquivos_arq_id` INT NULL ,
+  `arquivos_arq_id` INT NOT NULL ,
   PRIMARY KEY (`des_id`) ,
   CONSTRAINT `fk_destaque_arquivos1`
     FOREIGN KEY (`arquivos_arq_id` )
@@ -239,7 +251,13 @@ CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`empresas` (
   `emp_pais` VARCHAR(100) NULL ,
   `emp_cep` VARCHAR(45) NULL ,
   `emp_dtcriacao` DATETIME NULL ,
-  PRIMARY KEY (`emp_id`) )
+  `arquivos_arq_id` INT NOT NULL ,
+  PRIMARY KEY (`emp_id`) ,
+  CONSTRAINT `fk_empresas_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `cms_cmsv1`.`arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
 ENGINE = InnoDB;
 
 
@@ -433,72 +451,6 @@ CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`usuarios_has_funcionalidades` (
   CONSTRAINT `fk_usuarios_has_funcionalidades_funcionalidades1`
     FOREIGN KEY (`funcionalidades_fun_id` )
     REFERENCES `cms_cmsv1`.`funcionalidades` (`fun_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `cms_cmsv1`.`arquivos_has_pessoas`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cms_cmsv1`.`arquivos_has_pessoas` ;
-
-CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`arquivos_has_pessoas` (
-  `arquivos_arq_id` INT NOT NULL ,
-  `pessoas_pes_id` INT NOT NULL ,
-  PRIMARY KEY (`arquivos_arq_id`, `pessoas_pes_id`) ,
-  CONSTRAINT `fk_arquivos_has_pessoas_arquivos1`
-    FOREIGN KEY (`arquivos_arq_id` )
-    REFERENCES `cms_cmsv1`.`arquivos` (`arq_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_arquivos_has_pessoas_pessoas1`
-    FOREIGN KEY (`pessoas_pes_id` )
-    REFERENCES `cms_cmsv1`.`pessoas` (`pes_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `cms_cmsv1`.`empresas_has_arquivos`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cms_cmsv1`.`empresas_has_arquivos` ;
-
-CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`empresas_has_arquivos` (
-  `empresas_emp_id` INT NOT NULL ,
-  `arquivos_arq_id` INT NOT NULL ,
-  PRIMARY KEY (`empresas_emp_id`, `arquivos_arq_id`) ,
-  CONSTRAINT `fk_empresas_has_arquivos_empresas1`
-    FOREIGN KEY (`empresas_emp_id` )
-    REFERENCES `cms_cmsv1`.`empresas` (`emp_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_empresas_has_arquivos_arquivos1`
-    FOREIGN KEY (`arquivos_arq_id` )
-    REFERENCES `cms_cmsv1`.`arquivos` (`arq_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
--- Table `cms_cmsv1`.`parceiros_has_arquivos`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `cms_cmsv1`.`parceiros_has_arquivos` ;
-
-CREATE  TABLE IF NOT EXISTS `cms_cmsv1`.`parceiros_has_arquivos` (
-  `parceiros_par_id` INT NOT NULL ,
-  `arquivos_arq_id` INT NOT NULL ,
-  PRIMARY KEY (`parceiros_par_id`, `arquivos_arq_id`) ,
-  CONSTRAINT `fk_parceiros_has_arquivos_parceiros1`
-    FOREIGN KEY (`parceiros_par_id` )
-    REFERENCES `cms_cmsv1`.`parceiros` (`par_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_parceiros_has_arquivos_arquivos1`
-    FOREIGN KEY (`arquivos_arq_id` )
-    REFERENCES `cms_cmsv1`.`arquivos` (`arq_id` )
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
 ENGINE = InnoDB;
