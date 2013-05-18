@@ -14,16 +14,26 @@
 					</label>
 				</form>
 			</section>
-			<span><strong>Dica:</strong> Clique e arraste para definir a ordem das fotos</span>	
-			<a href="#" title="Voltar para Listagem">Voltar para Listagem</a>
+			<span class="info-box"><strong>Dica:</strong> Clique e arraste para definir a ordem das fotos</span>	
+			<section class="back-list">
+				<a href="#" title="Voltar para Listagem">Voltar para Listagem</a>
+			</section>
+			<section class="add-more-img">
+				<form>
+					<label>
+						<span>Adicionar novas Imagens</span>
+						<input class="more-img" type="file" value="Adicionar">
+					</label>
+				</form>
+			</section>
 			<section class="list-gallery">
-				<ul>
+				<ul class="list-sortable">
 					<li>
 						<img src="http://placehold.it/111x111/red">
-						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
+						<a href="#" title="Lorem ipsum">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -32,7 +42,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -41,7 +51,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -50,7 +60,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -59,7 +69,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -68,7 +78,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -77,7 +87,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -86,7 +96,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -95,7 +105,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -104,7 +114,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -113,7 +123,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -122,7 +132,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -131,7 +141,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -140,7 +150,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -149,7 +159,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
@@ -158,7 +168,7 @@
 						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
 							<a class="edit-name" href="#" title="Editar">Editar Nome |</a>
-							<a class="edit" href="#" title="Editar">Visualizar |</a>
+							<a class="edit" href="#" title="Visualizar">Visualizar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>

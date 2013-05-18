@@ -6,7 +6,7 @@
 				<h2>Notícias</h2>
 				<a class="new-add" href="#" title="Adicionar Nova Notícia">Adicionar Nova</a>
 				<form class="search">
-					<h3>Buscar Galeria</h3>
+					<h3>Buscar Notícia</h3>
 					<label>
 						<input class="clear-text" value="Digite sua pesquisa">
 						<button class="send-search">Ok</button>

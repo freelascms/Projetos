@@ -9,18 +9,18 @@
 							<li><a href="categorias.php" title="Catégorias">» Catégorias</a></li>
 						</ul>				
 					</li>
-					<li><a href="galeria.php" title="Galerias"> Galerias</a>
+					<li><a href="#" title="Galerias"> Galerias</a>
 						<ul class="submenu">
-							<li><a href="lista-noticia.php" title="Todas as Galerias">» Todas as Galerias</a></li>
+							<li><a href="galeria.php" title="Todas as Galerias">» Todas as Galerias</a></li>
 							<li><a href="#" title="Adicionar Nova Galeria">» Adicionar Nova Galeria</a></li>
 							<li><a href="categorias.php" title="Catégorias">» Catégorias</a></li>
 						</ul>
 					</li>
 					<li><a href="#" title="Banners">» Banners</a>
 						<ul class="submenu">
-							<li><a href="#" title="Todos os Banners">» Todos os Banners</a></li>
-							<li><a href="#" title="Adicionar Nova Banner">» Adicionar Nova Banner</a></li>
-							<li><a href="#" title="Catégorias">» Catégorias</a></li>
+							<li><a href="listagem-banner.php" title="Todos os Banners">» Todos os Banners</a></li>
+							<li><a href="novo-banner.php" title="Adicionar Novo Banner">» Adicionar Novo Banner</a></li>
+							<li><a href="formatos-banner.php" title="Formatos">» Formatos</a></li>
 						</ul>
 					</li>
 				</ul>

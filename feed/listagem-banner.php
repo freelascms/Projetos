@@ -17,9 +17,9 @@
 			<section class="list-banner">
 				<ul>
 					<li>
-						<a href="#">» Mussum ipsum cacilds, vidis litro abertis.</a>
+						<a href="visualizar-banner.php">» Mussum ipsum cacilds, vidis litro abertis.</a>
 						<div class="show-elements">
-							<a class="edit" href="#" title="Editar">Editar |</a>
+							<a class="edit" href="visualizar-banner.php" title="Editar">Editar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 						<div class="info-banner">

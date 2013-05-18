@@ -29,11 +29,16 @@ $('.sidebar nav ul li .submenu li').hover(function(){
 	$(this).stop().animate({'backgroundColor':'#dddddd'}, 300);
 });
 // hover das listas
-$('.main .list-box ul li, .new-add, .list-gallery ul li, .list-banner ul li, .send-search, .add-new-banner, .btn-add-category, .edit-new-notice a').hover(function(){
+$('.main .list-box ul li, .new-add, .list-gallery ul li, .list-banner ul li, .send-search, .add-new-banner, .btn-add-category, .edit-new-notice a, .back-list a').hover(function(){
 	$(this).stop().animate({'backgroundColor':'#d1d1d1'}, 300);
 	}, function(){
 	$(this).stop().animate({'backgroundColor':'#ededed'}, 300);
 });
+
+$(function() {
+    $( ".list-sortable" ).sortable();
+    $( ".list-sortable" ).disableSelection();
+  });
 
 
 $(document).ready(function(){

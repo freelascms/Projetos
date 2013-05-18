@@ -38,7 +38,7 @@ mark {background:#FCD700; color:#000; font-style:italic; font-weight:bold;}
 
 /* Toolbox */
 .left {float:left;}
-.right {float:right;}
+.right {float:right!important;}
 .hide {display:none !important;}
 .clear {clear:both;}
 .screen-reader {position:absolute; top:-99999px; visibility:hidden;}
@@ -60,7 +60,7 @@ a:hover{}
 #content.login .box-login .box-form form .forgot-password {margin:0 0 0 20px;color:#676752;font:14px/32px 'Tahoma',sans-serif;float:left;}
 /* Header */
 
-#header{height:70px;background:#FFF;border-bottom:2px solid #eaeaea;}
+#header{width:100%;height:70px;top:0;background:#FFF;border-bottom:2px solid #eaeaea;position:fixed}
 #header h1 {width:159px;height:39px;margin:20px 0 0 10px;background:url(../img/layout/logo-cms-menor.png) no-repeat;border-right:1px dotted #d4501b;float:left;text-indent:-999em}
 #header h1 a {width:159px;height:39px;float:left;}
 #header h2 {padding:27px 0 0 20px;color:#676752;font:18px 'Tahoma',sans-serif;float:left;}
@@ -68,7 +68,7 @@ a:hover{}
 
 /* Content */
 #content.content {width:100%;background:#FFF;float:left;}
-#content.content .main {width:1035px;margin:0 0 0 20px;float:left;}
+#content.content .main {width:1035px;margin:85px 0 30px 220px;float:left;}
 #content.content .main .top-header {width:1008px;margin:35px 0 30px 0;padding:0 0 15px;border-bottom:1px solid #e28a67;float:left;}
 #content.content .main .top-header h2 {color:#d4501b;font:32px 'Tahoma',sans-serif;float:left;}
 #content.content .main .top-header h2 em {color:#d4501b;font:22px 'Tahoma',sans-serif;}
@@ -133,7 +133,31 @@ a:hover{}
 #content.content .main .preview-notice p a{color:#626262;font:14px/20px 'Tahoma',sans-serif;}
 #content.content .main .preview-notice figure {max-width:600px;margin:15px 15px 15px 0;border:5px solid #dfdfdf;float:left;}
 
-.sidebar {width:201px;min-height:950px;background:url(../img/layout/bg-sidebar.png) repeat-y;float:left;}
+#content.content .main .add-banner form {width:1000px;float:left;}
+#content.content .main .add-banner h4 {width:1000px;margin:0 0 30px 0;color:#d4501b;font:25px 'Tahoma',sans-serif;float:left;}
+#content.content .main .add-banner form label {margin:0 0 10px 0;font:14px 'Tahoma',sans-serif;float:left;}
+#content.content .main .add-banner form label input {width:1000px;height:34px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
+#content.content .main .add-banner form label select{width:1008px;height:34px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
+#content.content .main .add-banner form label .more-img {margin:10px 0 0;color:#3a7abb;font:700 12px 'Tahoma',sans-serif;clear:both;float:left;}
+#content.content .main .add-banner form label .btn-concluid {width:90px;height:38px;color:#FFF;font:14px 'Tahoma',sans-serif;background:#d4501b;border-radius:5px;float:right;border:1px solid #d4501b;text-align:center}
+
+#content.content .main .add-banner .edit-info {float:left;}
+#content.content .main .add-banner .edit-info .list-info {float:left;}
+#content.content .main .add-banner .edit-info .list-info .info-img {margin:10px 0;padding:10px 0;border-bottom:3px solid #dfdfdf;float:left;}
+#content.content .main .add-banner .edit-info .list-info figure {margin:0 0 10px 0;float:left;}
+#content.content .main .add-banner .edit-info .list-info label {margin:0 0 10px 0;font:14px 'Tahoma',sans-serif;float:left;}
+#content.content .main .add-banner .edit-info .list-info label input {width:1000px;height:34px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
+#content.content .main .add-banner .edit-info .list-info label textarea {width:1000px;height:200px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;resize:none;}
+
+
+#content.content .main .back-list {height:37px;margin:-28px 25px 0 0;float:right;}
+#content.content .main .back-list a {height:37px;margin:0 2px 0 0;padding:0 10px;background:#dfdfdf;color:#626262;font:14px/37px 'Tahoma',sans-serif;float:left;}
+#content.content .main .add-more-img {margin:0 0 20px 0;float:left;}
+#content.content .main .info-box {width:600px;margin:-25px 0 0;float:left;}
+#content.content .main form label span {margin:15px 10px 0 0;font:14px 'Tahoma',sans-serif;float:left;}
+#content.content .main form label .more-img {width:400px;height:34px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
+
+.sidebar {width:201px;min-height:950px;top:70px!important;background:url(../img/layout/bg-sidebar.png) repeat-y;float:left;position:fixed;}
 .sidebar nav {margin:30px 0 0;}
 .sidebar nav ul li {width:176px;min-height:40px;padding:0 0 0 25px;border-bottom:1px solid #efefef;background:#dddddd;float:left;}
 .sidebar nav ul li a {width:176px;height:40px;color:#6c6c5e;font:13px/40px 'Tahoma',sans-serif;float:left;}
