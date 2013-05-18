@@ -1,0 +1,21 @@
+/* the humans responsible & colophon */
+/* humanstxt.org */
+
+/* ORGANIZATION */
+	Name: Dereckson and Eliezer
+	Site:
+	Twitter:
+	Location: Recife, Brazil
+
+/* TEAM */
+	<Freelas Cms>: <Dereckson & Eliezer>
+	Site: 
+	Twitter: 
+	Location: Recife - PE - Brazil
+
+/* THANKS */
+	Names (& URL): 
+
+/* SITE */
+	Standards: HTML5, CSS3
+	Components: Modernizr, jQuery
