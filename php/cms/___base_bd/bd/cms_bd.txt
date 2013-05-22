@@ -1,0 +1,511 @@
+SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0;
+SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0;
+SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='TRADITIONAL,ALLOW_INVALID_DATES';
+
+CREATE SCHEMA IF NOT EXISTS `cms_cmsv1` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci ;
+USE `cms_cmsv1` ;
+
+-- -----------------------------------------------------
+-- Table `perfil`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `perfil` ;
+
+CREATE  TABLE IF NOT EXISTS `perfil` (
+  `per_id` INT NOT NULL AUTO_INCREMENT ,
+  `per_nome` VARCHAR(45) NULL ,
+  PRIMARY KEY (`per_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `pessoas`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `pessoas` ;
+
+CREATE  TABLE IF NOT EXISTS `pessoas` (
+  `pes_id` INT NOT NULL AUTO_INCREMENT ,
+  `pes_nome` VARCHAR(200) NULL ,
+  `pes_rg` VARCHAR(45) NULL ,
+  `pes_cpf` VARCHAR(45) NULL ,
+  `pes_email` VARCHAR(200) NULL ,
+  `pes_endereco` VARCHAR(300) NULL ,
+  `pes_comp` VARCHAR(300) NULL ,
+  `pes_bairro` VARCHAR(100) NULL ,
+  `pes_cidade` VARCHAR(100) NULL ,
+  `pes_pais` VARCHAR(100) NULL ,
+  `pes_cep` VARCHAR(45) NULL ,
+  `pes_telefone` VARCHAR(45) NULL ,
+  `pes_celular` VARCHAR(45) NULL ,
+  `pes_dtcriacao` DATETIME NULL ,
+  PRIMARY KEY (`pes_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `usuarios`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `usuarios` ;
+
+CREATE  TABLE IF NOT EXISTS `usuarios` (
+  `usu_id` INT NOT NULL AUTO_INCREMENT ,
+  `usu_login` VARCHAR(45) NULL ,
+  `usu_senha` VARCHAR(45) NULL ,
+  `usu_email` VARCHAR(45) NULL ,
+  `usu_dtcriacao` DATETIME NULL ,
+  `perfil_per_id` INT NOT NULL ,
+  `pessoas_pes_id` INT NOT NULL ,
+  PRIMARY KEY (`usu_id`) ,
+  CONSTRAINT `fk_usuarios_perfil1`
+    FOREIGN KEY (`perfil_per_id` )
+    REFERENCES `perfil` (`per_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuarios_pessoas1`
+    FOREIGN KEY (`pessoas_pes_id` )
+    REFERENCES `pessoas` (`pes_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `funcionalidades`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `funcionalidades` ;
+
+CREATE  TABLE IF NOT EXISTS `funcionalidades` (
+  `fun_id` INT NOT NULL AUTO_INCREMENT ,
+  `fun_nome` VARCHAR(100) NULL ,
+  `fun_url` VARCHAR(300) NULL ,
+  `fun_link` VARCHAR(300) NULL ,
+  `fun_ordem` INT NULL ,
+  PRIMARY KEY (`fun_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `instancias`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `instancias` ;
+
+CREATE  TABLE IF NOT EXISTS `instancias` (
+  `ins_id` INT NOT NULL AUTO_INCREMENT ,
+  `ins_nome` VARCHAR(45) NOT NULL ,
+  `ins_url` VARCHAR(100) NULL ,
+  `ins_ordem` INT NULL ,
+  PRIMARY KEY (`ins_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `registro_de_atividades`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `registro_de_atividades` ;
+
+CREATE  TABLE IF NOT EXISTS `registro_de_atividades` (
+  `reg_id` INT NOT NULL AUTO_INCREMENT ,
+  `reg_ip` VARCHAR(45) NULL ,
+  `reg_dtreg` DATETIME NULL ,
+  `reg_atividade` VARCHAR(300) NULL ,
+  PRIMARY KEY (`reg_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cursos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cursos` ;
+
+CREATE  TABLE IF NOT EXISTS `cursos` (
+  `cur_id` INT NOT NULL AUTO_INCREMENT ,
+  `cur_nome` VARCHAR(200) NULL ,
+  `cur_descricao` MEDIUMTEXT NULL ,
+  `cur_link` VARCHAR(300) NULL ,
+  `cur_dtinicio` DATETIME NULL ,
+  `cur_dtfim` DATETIME NULL ,
+  `cur_dtcriacao` DATETIME NULL ,
+  `cur_publicado` INT NULL ,
+  `cur_destaque` INT NULL ,
+  PRIMARY KEY (`cur_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `conteudo`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `conteudo` ;
+
+CREATE  TABLE IF NOT EXISTS `conteudo` (
+  `con_id` INT NOT NULL AUTO_INCREMENT ,
+  `con_titulo` VARCHAR(300) NULL ,
+  `con_subtitulo` VARCHAR(300) NULL ,
+  `con_texto` MEDIUMTEXT NULL ,
+  `con_dtcriacao` DATETIME NULL ,
+  `con_dtpublicacao` DATETIME NULL ,
+  `con_publicado` INT NULL ,
+  `con_destaque` INT NULL ,
+  PRIMARY KEY (`con_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `aluno`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `aluno` ;
+
+CREATE  TABLE IF NOT EXISTS `aluno` (
+  `alu_id` INT NOT NULL AUTO_INCREMENT ,
+  `pessoas_pes_id` INT NOT NULL ,
+  `alu_matricula` VARCHAR(45) NULL ,
+  PRIMARY KEY (`alu_id`) ,
+  CONSTRAINT `fk_aluno_pessoas1`
+    FOREIGN KEY (`pessoas_pes_id` )
+    REFERENCES `pessoas` (`pes_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `parceiros`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `parceiros` ;
+
+CREATE  TABLE IF NOT EXISTS `parceiros` (
+  `par_id` INT NOT NULL AUTO_INCREMENT ,
+  `par_nome` VARCHAR(200) NULL ,
+  `par_link` VARCHAR(300) NULL ,
+  `par_publicado` INT NULL ,
+  `par_destaque` INT NULL ,
+  `par_dtcriacao` DATETIME NULL ,
+  PRIMARY KEY (`par_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `arquivos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `arquivos` ;
+
+CREATE  TABLE IF NOT EXISTS `arquivos` (
+  `arq_id` INT NOT NULL AUTO_INCREMENT ,
+  `arq_nome` VARCHAR(300) NULL ,
+  `arq_tipo` VARCHAR(45) NULL ,
+  `arq_link` VARCHAR(300) NULL ,
+  `arq_dtcriacao` DATETIME NULL ,
+  PRIMARY KEY (`arq_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `destaque`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `destaque` ;
+
+CREATE  TABLE IF NOT EXISTS `destaque` (
+  `des_id` INT NOT NULL ,
+  `des_titulo` VARCHAR(300) NULL ,
+  `des_descricao` VARCHAR(300) NULL ,
+  `des_dtcriacao` DATETIME NULL ,
+  `des_publicado` INT NULL ,
+  `des_destaque` INT NULL ,
+  `arquivos_arq_id` INT NULL ,
+  PRIMARY KEY (`des_id`) ,
+  CONSTRAINT `fk_destaque_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `empresas`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `empresas` ;
+
+CREATE  TABLE IF NOT EXISTS `empresas` (
+  `emp_id` INT NOT NULL AUTO_INCREMENT ,
+  `emp_nome` VARCHAR(300) NULL ,
+  `emp_razaosocial` VARCHAR(300) NULL ,
+  `emp_cnpj` VARCHAR(45) NULL ,
+  `emp_email` VARCHAR(200) NULL ,
+  `emp_telefone` VARCHAR(45) NULL ,
+  `emp_celular` VARCHAR(45) NULL ,
+  `emp_endereco` VARCHAR(300) NULL ,
+  `emp_comp` VARCHAR(300) NULL ,
+  `emp_bairro` VARCHAR(100) NULL ,
+  `emp_cidade` VARCHAR(100) NULL ,
+  `emp_pais` VARCHAR(100) NULL ,
+  `emp_cep` VARCHAR(45) NULL ,
+  `emp_dtcriacao` DATETIME NULL ,
+  PRIMARY KEY (`emp_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `assinantes`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `assinantes` ;
+
+CREATE  TABLE IF NOT EXISTS `assinantes` (
+  `ass_id` INT NOT NULL AUTO_INCREMENT ,
+  `ass_login` VARCHAR(45) NULL ,
+  `ass_senha` VARCHAR(45) NULL ,
+  `ass_email` VARCHAR(45) NULL ,
+  `ass_dtcriacao` DATETIME NULL ,
+  `pessoas_pes_id` INT NULL ,
+  `empresas_emp_id` INT NULL ,
+  PRIMARY KEY (`ass_id`) ,
+  CONSTRAINT `fk_assinantes_pessoas1`
+    FOREIGN KEY (`pessoas_pes_id` )
+    REFERENCES `pessoas` (`pes_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_assinantes_empresas1`
+    FOREIGN KEY (`empresas_emp_id` )
+    REFERENCES `empresas` (`emp_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `newsletter`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `newsletter` ;
+
+CREATE  TABLE IF NOT EXISTS `newsletter` (
+  `news_id` INT NOT NULL AUTO_INCREMENT ,
+  `news_nome` VARCHAR(300) NULL ,
+  `news_email` VARCHAR(200) NULL ,
+  `news_dtcriacao` DATETIME NULL ,
+  PRIMARY KEY (`news_id`) )
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cursos_has_aluno`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cursos_has_aluno` ;
+
+CREATE  TABLE IF NOT EXISTS `cursos_has_aluno` (
+  `cursos_cur_id` INT NOT NULL ,
+  `aluno_alu_id` INT NOT NULL ,
+  PRIMARY KEY (`cursos_cur_id`, `aluno_alu_id`) ,
+  CONSTRAINT `fk_cursos_has_aluno_cursos`
+    FOREIGN KEY (`cursos_cur_id` )
+    REFERENCES `cursos` (`cur_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cursos_has_aluno_aluno1`
+    FOREIGN KEY (`aluno_alu_id` )
+    REFERENCES `aluno` (`alu_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `cursos_has_arquivos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `cursos_has_arquivos` ;
+
+CREATE  TABLE IF NOT EXISTS `cursos_has_arquivos` (
+  `cursos_cur_id` INT NOT NULL ,
+  `arquivos_arq_id` INT NOT NULL ,
+  PRIMARY KEY (`cursos_cur_id`, `arquivos_arq_id`) ,
+  CONSTRAINT `fk_cursos_has_arquivos_cursos1`
+    FOREIGN KEY (`cursos_cur_id` )
+    REFERENCES `cursos` (`cur_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cursos_has_arquivos_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `arquivos_has_conteudo`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `arquivos_has_conteudo` ;
+
+CREATE  TABLE IF NOT EXISTS `arquivos_has_conteudo` (
+  `arquivos_arq_id` INT NOT NULL ,
+  `conteudo_con_id` INT NOT NULL ,
+  PRIMARY KEY (`arquivos_arq_id`, `conteudo_con_id`) ,
+  CONSTRAINT `fk_arquivos_has_conteudo_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_arquivos_has_conteudo_conteudo1`
+    FOREIGN KEY (`conteudo_con_id` )
+    REFERENCES `conteudo` (`con_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `arquivos_has_aluno`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `arquivos_has_aluno` ;
+
+CREATE  TABLE IF NOT EXISTS `arquivos_has_aluno` (
+  `arquivos_arq_id` INT NOT NULL ,
+  `aluno_alu_id` INT NOT NULL ,
+  PRIMARY KEY (`arquivos_arq_id`, `aluno_alu_id`) ,
+  CONSTRAINT `fk_arquivos_has_aluno_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_arquivos_has_aluno_aluno1`
+    FOREIGN KEY (`aluno_alu_id` )
+    REFERENCES `aluno` (`alu_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `funcionalidades_has_instancias`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `funcionalidades_has_instancias` ;
+
+CREATE  TABLE IF NOT EXISTS `funcionalidades_has_instancias` (
+  `funcionalidades_fun_id` INT NOT NULL ,
+  `instancias_ins_id` INT NOT NULL ,
+  PRIMARY KEY (`funcionalidades_fun_id`, `instancias_ins_id`) ,
+  CONSTRAINT `fk_funcionalidades_has_instancias_funcionalidades1`
+    FOREIGN KEY (`funcionalidades_fun_id` )
+    REFERENCES `funcionalidades` (`fun_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_funcionalidades_has_instancias_instancias1`
+    FOREIGN KEY (`instancias_ins_id` )
+    REFERENCES `instancias` (`ins_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `usuarios_has_instancias`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `usuarios_has_instancias` ;
+
+CREATE  TABLE IF NOT EXISTS `usuarios_has_instancias` (
+  `usuarios_usu_id` INT NOT NULL ,
+  `instancias_ins_id` INT NOT NULL ,
+  PRIMARY KEY (`usuarios_usu_id`, `instancias_ins_id`) ,
+  CONSTRAINT `fk_usuarios_has_instancias1_usuarios1`
+    FOREIGN KEY (`usuarios_usu_id` )
+    REFERENCES `usuarios` (`usu_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuarios_has_instancias1_instancias1`
+    FOREIGN KEY (`instancias_ins_id` )
+    REFERENCES `instancias` (`ins_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `usuarios_has_funcionalidades`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `usuarios_has_funcionalidades` ;
+
+CREATE  TABLE IF NOT EXISTS `usuarios_has_funcionalidades` (
+  `usuarios_usu_id` INT NOT NULL ,
+  `funcionalidades_fun_id` INT NOT NULL ,
+  PRIMARY KEY (`usuarios_usu_id`, `funcionalidades_fun_id`) ,
+  CONSTRAINT `fk_usuarios_has_funcionalidades_usuarios1`
+    FOREIGN KEY (`usuarios_usu_id` )
+    REFERENCES `usuarios` (`usu_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_usuarios_has_funcionalidades_funcionalidades1`
+    FOREIGN KEY (`funcionalidades_fun_id` )
+    REFERENCES `funcionalidades` (`fun_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `arquivos_has_pessoas`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `arquivos_has_pessoas` ;
+
+CREATE  TABLE IF NOT EXISTS `arquivos_has_pessoas` (
+  `arquivos_arq_id` INT NOT NULL ,
+  `pessoas_pes_id` INT NOT NULL ,
+  PRIMARY KEY (`arquivos_arq_id`, `pessoas_pes_id`) ,
+  CONSTRAINT `fk_arquivos_has_pessoas_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_arquivos_has_pessoas_pessoas1`
+    FOREIGN KEY (`pessoas_pes_id` )
+    REFERENCES `pessoas` (`pes_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `empresas_has_arquivos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `empresas_has_arquivos` ;
+
+CREATE  TABLE IF NOT EXISTS `empresas_has_arquivos` (
+  `empresas_emp_id` INT NOT NULL ,
+  `arquivos_arq_id` INT NOT NULL ,
+  PRIMARY KEY (`empresas_emp_id`, `arquivos_arq_id`) ,
+  CONSTRAINT `fk_empresas_has_arquivos_empresas1`
+    FOREIGN KEY (`empresas_emp_id` )
+    REFERENCES `empresas` (`emp_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_empresas_has_arquivos_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+
+-- -----------------------------------------------------
+-- Table `parceiros_has_arquivos`
+-- -----------------------------------------------------
+DROP TABLE IF EXISTS `parceiros_has_arquivos` ;
+
+CREATE  TABLE IF NOT EXISTS `parceiros_has_arquivos` (
+  `parceiros_par_id` INT NOT NULL ,
+  `arquivos_arq_id` INT NOT NULL ,
+  PRIMARY KEY (`parceiros_par_id`, `arquivos_arq_id`) ,
+  CONSTRAINT `fk_parceiros_has_arquivos_parceiros1`
+    FOREIGN KEY (`parceiros_par_id` )
+    REFERENCES `parceiros` (`par_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_parceiros_has_arquivos_arquivos1`
+    FOREIGN KEY (`arquivos_arq_id` )
+    REFERENCES `arquivos` (`arq_id` )
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
+USE `cms_cmsv1` ;
+
+
+SET SQL_MODE=@OLD_SQL_MODE;
+SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
+SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
