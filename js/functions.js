@@ -23,7 +23,9 @@ $("a[href='#top']").click(function() {
 	return false;
 });
 
-	
+$( "#accordion" ).accordion({
+      heightStyle: "content"
+    });
 
 // Animação troca de cores
 $('.send-news, .next-course, .prev-course, .more-articles, .pagination ul li a, .send-form, .read-more-notices').hover(function(){

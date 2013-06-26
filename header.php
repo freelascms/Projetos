@@ -45,19 +45,19 @@
 					<nav id="nav">
 						<ul>
 							<li> <a href="univia.php" title="Univia">Univia</a></li>
-							<li> <a href="#" title="Cursos">Cursos</a></li>
+							<li> <a href="cursos.php" title="Cursos">Cursos</a></li>
 							<li> <a href="lista-noticias.php" title="Notícias">Notícias</a></li>
 							<li> <a href="lista-artigos.php" title="Artigos">Artigos</a></li>
-							<li> <a href="#" title="Talentos">Talentos</a></li>
+							<li> <a href="talentos.php" title="Talentos">Talentos</a></li>
 							<li> <a href="contato.php" title="Contato">Contato</a></li>
 						</ul>
 					</nav>
 				</section>		
 				<section id="dg-container" class="dg-container">
 					<div class="dg-wrapper">
-						<a href="#"><img src="http://placehold.it/820x500" alt="image05"><div>http://circlemeetups.com/</div></a>
-						<a href="#"><img src="http://placehold.it/820x500" alt="image06"><div>http://www.castirondesign.com/</div></a>
-						<a href="#"><img src="http://placehold.it/820x500" alt="image07"><div>http://www.foundrycollective.com/</div></a>
+						<a href="#"><img src="img/content/Excel-Avancado-Analista.jpg" alt="Excel Avançado"></a>
+						<a href="#"><img src="img/content/Gestao-Frota.jpg" alt="Gestão de Frota"></a>
+						<a href="#"><img src="img/content/Pratica-Trabalhista.jpg" alt="Prática Trabalhista"></a>
 					</div>
 					<nav>	
 						<span class="dg-prev">Anterior</span>
