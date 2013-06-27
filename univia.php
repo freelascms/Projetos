@@ -11,7 +11,7 @@
 						<li><p>Visitas técnicas supervisionadas dentro das empresas</p></li>
 						<li><p>Estágios acompanhados</p></li>
 					</ul>
-					<p></p>
+					<p>Conheça o Instituto Univia e esteja pronto para atuar no mercado de trabalho. Você, empresário, encontre aqui o profissional experiente que sua organização procura.</p>
 				</section>
 				<section class="sidebar">
 					<h3>Nossos Cursos</h3>	
