@@ -149,13 +149,27 @@ a:hover{}
 #content.content .main .add-banner .edit-info .list-info label input {width:1000px;height:34px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
 #content.content .main .add-banner .edit-info .list-info label textarea {width:1000px;height:200px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;resize:none;}
 
-
 #content.content .main .back-list {height:37px;margin:-28px 25px 0 0;float:right;}
 #content.content .main .back-list a {height:37px;margin:0 2px 0 0;padding:0 10px;background:#dfdfdf;color:#626262;font:14px/37px 'Tahoma',sans-serif;float:left;}
 #content.content .main .add-more-img {margin:0 0 20px 0;float:left;}
 #content.content .main .info-box {width:600px;margin:-25px 0 0;float:left;}
 #content.content .main form label span {margin:15px 10px 0 0;font:14px 'Tahoma',sans-serif;float:left;}
 #content.content .main form label .more-img {width:400px;height:34px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
+
+#content.content .main .page-edit {width:960px;float:left;}
+#content.content .main .page-edit .page-edit-content {width:650px;float:left;}
+#content.content .main .page-edit form {width:1010px;float:left;}
+#content.content .main .page-edit form label {width:650px;margin:0 0 10px 0;font:14px 'Tahoma',sans-serif;float:left;}
+#content.content .main .page-edit form label span {margin:15px 10px 0 0;font:14px 'Tahoma',sans-serif;float:none;}
+#content.content .main .page-edit form label input {width:640px;height:34px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
+#content.content .main .page-edit form label textarea {width:640px;min-height:140px;margin:5px 0 0;padding:0 0 0 5px;border:1px solid #cdcdcd;background:#f6f6f6;font:14px 'Tahoma',sans-serif;float:left;border-radius:5px;}
+#content.content .main .page-edit form .sidebar-edit {width:280px;padding:20px;min-height:390px;background:#e2e2e2;float:right;}
+#content.content .main .page-edit form .sidebar-edit label {width:300px;float:left;}
+#content.content .main .page-edit form .sidebar-edit .category {width:250px;margin:0;padding:20px 15px;background:#f6f6f6;float:left;}
+#content.content .main .page-edit form .sidebar-edit .category label {width:300px;float:left;}
+#content.content .main .page-edit form .sidebar-edit span.title-category {width:300px;margin:0 0 10px -20px;padding:0 0 0 20px;border-top:5px solid #fff;font:18px 'Tahoma',sans-serif;float:left;}
+#content.content .main .page-edit form .sidebar-edit .category label input {width:20px;height:20px;margin:1px 0 0;float:left;}
+#content.content .main .page-edit form .btn-complete {width:90px;height:38px;margin:30px 0 0;color:#FFF;font:14px 'Tahoma',sans-serif;background:#d4501b;border-radius:5px;float:right;border:1px solid #d4501b;text-align:center}
 
 .sidebar {width:201px;min-height:950px;top:70px!important;background:url(../img/layout/bg-sidebar.png) repeat-y;float:left;position:fixed;}
 .sidebar nav {margin:30px 0 0;}

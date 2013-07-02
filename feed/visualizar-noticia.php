@@ -15,8 +15,8 @@
 			</section>	
 			<section class="preview-notice">
 				<section class="edit-new-notice">
-					<a href="#" title="Voltar para Lista de Notícias">Voltar para Lista de Notícias</a>
-					<a href="#" title="Editar Notícia">Editar Notícia</a>
+					<a href="lista-noticia.php" title="Voltar para Lista de Notícias">Voltar para Lista de Notícias</a>
+					<a href="editar-noticia.php" title="Editar Notícia">Editar Notícia</a>
 				</section>
 				<h4>Título da Nóticia Inserido Aqui!!</h4>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam vel justo quis diam pharetra iaculis. Maecenas quam elit, pharetra et vulputate mattis, dapibus eu lorem. Sed odio libero, sollicitudin vehicula dignissim at, fringilla non nulla. Maecenas enim augue, commodo et tempus sed, rutrum non orci. Proin molestie facilisis sollicitudin. Pellentesque risus sem, pharetra eget dictum ac, volutpat non ante. Cras sed enim elit. Donec convallis semper mi et sollicitudin. Aenean vehicula, lorem in egestas lobortis, odio nunc semper tellus, vel aliquet nunc dolor ut ipsum. Duis vulputate urna eu lorem faucibus pharetra. Mauris vel sapien non quam vulputate consequat id vitae libero. Duis leo neque, vulputate sed auctor ut, congue eget neque.</p>

@@ -18,42 +18,42 @@
 					<li>
 						<a href="visualizar-noticia.php" title="Título da Notícia">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
-							<a class="edit" href="#" title="Editar">Editar |</a>
+							<a class="edit" href="editar-noticia.php" title="Editar">Editar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
 					<li>
 						<a href="visualizar-noticia.php" title="Título da Notícia">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
-							<a class="edit" href="#" title="Editar">Editar |</a>
+							<a class="edit" href="editar-noticia.php" title="Editar">Editar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
 					<li>
 						<a href="visualizar-noticia.php" title="Título da Notícia">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
-							<a class="edit" href="#" title="Editar">Editar |</a>
+							<a class="edit" href="editar-noticia.php" title="Editar">Editar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
 					<li>
 						<a href="visualizar-noticia.php" title="Título da Notícia">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
-							<a class="edit" href="#" title="Editar">Editar |</a>
+							<a class="edit" href="editar-noticia.php" title="Editar">Editar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
 					<li>
 						<a href="visualizar-noticia.php" title="Título da Notícia">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
-							<a class="edit" href="#" title="Editar">Editar |</a>
+							<a class="edit" href="editar-noticia.php" title="Editar">Editar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
 					<li>
 						<a href="visualizar-noticia.php" title="Título da Notícia">» Mussum ipsum cacilds, vidis litro abertis.</a>	
 						<div class="show-elements">
-							<a class="edit" href="#" title="Editar">Editar |</a>
+							<a class="edit" href="editar-noticia.php" title="Editar">Editar |</a>
 							<a class="delete" href="#" title="Excluir"> Excluir</a>
 						</div>		
 					</li>
