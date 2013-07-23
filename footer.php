@@ -1,11 +1,24 @@
 			<section class="partners">
 					<h2>Parceiros</h2>
 					<ul>
-						<li><a href="#" title="Link do parceiro" rel="external"><img src="http://placehold.it/220x100"></a></li>
-						<li><a href="#" title="Link do parceiro" rel="external"><img src="http://placehold.it/220x100"></a></li>
-						<li><a href="#" title="Link do parceiro" rel="external"><img src="http://placehold.it/220x100"></a></li>
-						<li><a href="#" title="Link do parceiro" rel="external"><img src="http://placehold.it/220x100"></a></li>
+						<li>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/1.jpg"></a>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/2.jpg"></a>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/3.jpg"></a>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/4.jpg"></a>
+						</li>
+						<li>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/5.jpg"></a>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/6.jpg"></a>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/7.jpg"></a>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/8.jpg"></a>
+						</li>
+						<li>
+							<a href="#" title="Link do parceiro" rel="external"><img src="img/content/9.jpg"></a>
+						</li>
 					</ul>
+					<a class="prev-partners" href="#" title="">anterior</a>
+					<a class="next-partners" href="#" title="">próximo</a>
 				</section><!-- .partners -->
 			</section><!-- #content -->
 			<footer id="footer">

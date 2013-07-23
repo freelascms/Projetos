@@ -2,16 +2,17 @@
 			<section id="content">
 				<section class="univia">
 					<h2>Instituto Univia</h2>
-					<p>O Instituto Univia foi criado para formar profissionais qualificados na área prática da logística. Empresas apontam que profissionais têm dificuldades em executar atividades ligadas ao segmento, presos à teoria, o que gera mais custos com treinamentos e aprendizado.</p>
-					<p>Em parceria com organizações nesse segmento, munidas de expertise nas mais diversas vertentes da logística como armazenagem, movimentação, distribuição, tecnologia da informação e transporte com frota, o Instituto Univia capacita, orienta e desenvolve talentos. </p>
-					<p>Aqui, a teoria se alia à prática, com a proposta de trazer a rotina de uma empresa para dentro da sala de aula. </p>
-					<p>Professores especializados e atuantes no mercado de trabalho desenvolvem um direcionamento profissional para os alunos, diminuindo a distância para o mercado de trabalho, e facilitando a visão problemas e soluções dentro das organizações.</p>
+					<p>O Instituto Univia foi criado, inicialmente, para capacitar profissionais na área prática da logística. Após criteriosa análise de mercado, ficaram nítidas as dificuldades em executar atividades ligadas ao segmento. Presos, que se encontram, à teoria os profissionais não estavam aptos a atender as demandas práticas, gerando altos custos com treinamentos. Neste cenário, o INSTITUTO UNIVIA percebeu que a carência por expertise prática não se restringia apenas à esta área, e foi quando surgiram os novos núcleos: Tecnológico, Jurídico, Gestão de pessoas, entre outros. Todos com o mesmo compromisso: de trazer a experiência prática para dentro da sala de aula e fomentar o capital humano dentro das corporações.</p>
+					<p>Em parceria com grandes organizações, munidas de expertise nas mais diversas vertentes, o Instituto Univia capacita, orienta e desenvolve talentos.</p>
+					<p>Aqui, a teoria se alia à prática: trazemos a rotina de uma empresa para dentro da sala de aula.</p>
+					<p>Professores especializados e atuantes no mercado de trabalho desenvolvem um direcionamento profissional para os alunos, diminuindo a distância entre estes e o mercado de trabalho.</p>
 					<ul>
 						<li><p>Aulas práticas</p></li>
 						<li><p>Visitas técnicas supervisionadas dentro das empresas</p></li>
 						<li><p>Estágios acompanhados</p></li>
+						<li><p>Projetos de trainners.</p></li>
 					</ul>
-					<p>Conheça o Instituto Univia e esteja pronto para atuar no mercado de trabalho. Você, empresário, encontre aqui o profissional experiente que sua organização procura.</p>
+					<p>Conheça o Instituto Univia e esteja pronto para atuar no mercado de trabalho. Você, empresário, encontre aqui o profissional com a expertise que sua organização procura!</p>
 				</section>
 				<section class="sidebar">
 					<h3>Nossos Cursos</h3>	

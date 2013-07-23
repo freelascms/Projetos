@@ -54,4 +54,22 @@ $('.list-notices ul li, .list-articles ul li').hover(function(){
 	    easing:  'easeInOutBack'
 	});
 
+	$('.partners ul').cycle({ 
+	    fx:     'scrollHorz', 
+	    speed:  'slow', 
+	    timeout: 0, 
+	    next:   '.next-partners', 
+	    prev:   '.prev-partners',
+	    easing:  'easeInOutBack'
+	});
+
+	$('.team ul').cycle({ 
+	    fx:     'scrollHorz', 
+	    speed:  'slow', 
+	    timeout: 0, 
+	    next:   '.next-team', 
+	    prev:   '.prev-team',
+	    easing:  'easeInOutBack'
+	});
+
 });

@@ -66,20 +66,24 @@ a:hover{}
 	-o-transform-style: preserve-3d;
 	-ms-transform-style: preserve-3d;
 	transform-style: preserve-3d;}
-.dg-wrapper a{width: 820px;height: 498px;display: block;position: absolute;left: 0;top: 0;}
+.dg-wrapper a{width: 820px;height: 475px;display: block;position: absolute;left: 0;top:10px;background:url(../img/layout/bg-banner.png) repeat}
 .dg-wrapper a.dg-transition{
 	-webkit-transition: all 0.5s ease-in-out;
 	-moz-transition: all 0.5s ease-in-out;
 	-o-transition: all 0.5s ease-in-out;
 	-ms-transition: all 0.5s ease-in-out;
 	transition: all 0.5s ease-in-out;}
-.dg-wrapper a img{width: 820px;height: 498px;display: block;padding:0;}
+.dg-wrapper a img{width: 780px;height:auto;display: block;padding:0;opacity:0.3;}
 .dg-wrapper a div{font-style: italic;text-align: center;line-height: 50px;text-shadow: 1px 1px 1px rgba(255,255,255,0.5);color: #333;font-size: 16px;width: 100%;bottom: -55px;display: none;position: absolute;}
 .dg-wrapper a.dg-center div{display: block;}
+.dg-wrapper a.dg-center {top:0!important;}
+.dg-center img {width: 820px!important;height: 498px!important;opacity:1!important;}
 .dg-container nav{width: 58px;position: absolute;z-index: 1000;bottom: 0;left: 50%;margin-left: -29px;}
 .dg-container nav span{float: left;cursor:pointer;width: 24px;height: 25px;opacity: 0.8;background: transparent url(../images/arrows.png) no-repeat top left;}
 .dg-container nav span:hover{opacity: 1;}
-.dg-container nav span.dg-next{background-position: top right;margin-left: 10px;}
+
+.dg-container nav span.dg-prev{width:35px;height:35px;top:-265px;left:-420px;position:relative;background:url(../img/layout/arrow-prev-banner.png) no-repeat;text-indent:-999em;float:left;z-index:99}
+.dg-container nav span.dg-next{width:35px;height:35px;top:-290px;right:-420px;position:relative;background:url(../img/layout/arrow-next-banner.png) no-repeat;text-indent:-999em;float:right;z-index:99}
 /* Content */
 #content {width:960px;height:auto;margin:0 auto;}
 /*Cursos - Home*/
@@ -88,7 +92,7 @@ a:hover{}
 #content .courses ul {width:100%;height:340px;float:left;}
 #content .courses ul li {width:960px!important;height:340px;float:left;}
 #content .courses ul li a {width:220px;height:340px;margin:0 20px 0 0;background:#ececec;float:left;}
-#content .courses ul li a figure {width:220px;height:140px;float:left;}
+#content .courses ul li a figure {width:220px;height:190px;margin:30px 0 15px 0;float:left;}
 #content .courses ul li a h3 {padding:0 25px;color:#107f41;font:22px 'Days One',sans-serif;text-align:center}
 #content .courses ul li a p {margin:15px 0 0;padding:0 25px;color:#1c1c1c;font:12px 'Verdana',sans-serif;text-align:center}
 #content .courses .prev-course {width:21px;height:175px;top:-255px;background:#FFF url(../img/layout/icon-arrow-prev.png) no-repeat 5px 70px;float:left;text-indent:-999em;position:relative;z-index:99}
@@ -106,17 +110,23 @@ a:hover{}
 #content .notices .read-more-notices {width:88px;height:30px;margin:10px 0 0;color:#107f41;font:12px/30px 'Verdana',sans-serif;border-radius:5px;background:#FFF;float:right;text-align:center}
 /*Equipe - Home*/
 #content .team {width:460px;margin:0 0 0 10px;float:left;}
+#content .team ul li {width:460px;float:left;}
 #content .team h2 {margin:45px 0 25px 0;color:#000;font:35px 'Days One', sans-serif;text-transform:uppercase;}
 #content .team figure {width:220px;height:220px;margin:0 20px 0 0;float:left;}
-#content .team figure img {width:220px;height:220px;border-radius:115px;border:2px solid #107f41;float:left;}
+#content .team figure img {width:220px;height:213px;border-radius:115px;border:2px solid #107f41;float:left;}
 #content .team h3 {margin:15px 0 20px 0;color:#107f41;font:16px 'Days One', sans-serif;}
-#content .team p {margin:0 0 15px 0;color:#1c1c1c;font:12px 'Verdana', sans-serif;}
+#content .team p {width:220px;margin:0 0 15px 0;color:#1c1c1c;font:12px 'Verdana', sans-serif;float:right;}
 #content .team p span {font:700 12px 'Verdana', sans-serif;}
+#content .team .prev-team {width:23px;height:30px;top:-80px;left:70px;position:relative;background:url(../img/layout/ico-arrow-left.png) no-repeat;text-indent:-999em;float:left;z-index:99}
+#content .team .next-team {width:23px;height:30px;top:-80px;right:320px;position:relative;background:url(../img/layout/ico-arrow-right.png) no-repeat;text-indent:-999em;float:right;z-index:99}
 /*Parceiros - Home*/
 #content .partners {width:960px;margin:0 0 0 10px;float:left;}
 #content .partners h2 {margin:45px 0 25px 0;color:#000;font:35px 'Days One', sans-serif;text-transform:uppercase;}
-#content .partners ul {width:960px;height:100px;margin:0 0 30px 0;float:left;}
-#content .partners ul li{width:216px;height:98px;margin:0 20px 0 0;border:2px solid #bdbebe;border-radius:5px;float:left;}
+#content .partners ul {width:100%;height:105px;margin:0 0 30px 0;float:left;}
+#content .partners ul li{width:970px;height:101px;float:left;}
+#content .partners ul li a {width:218px;height:101px;margin:0 20px 0 0;border:2px solid #bdbebe;border-radius:5px;float:left;}
+#content .partners .prev-partners {width:23px;height:30px;top:-90px;left:-25px;position:relative;background:url(../img/layout/ico-arrow-left.png) no-repeat;text-indent:-999em;float:left;}
+#content .partners .next-partners {width:23px;height:30px;top:-90px;right:-15px;position:relative;background:url(../img/layout/ico-arrow-right.png) no-repeat;text-indent:-999em;float:right;}
 /*Página A Univia*/
 #content .univia {width:540px;margin:0 20px 0 0;float:left;}
 #content .univia h2 {margin:45px 0 25px 0;color:#000;font:35px 'Days One', sans-serif;text-transform:uppercase;}
@@ -227,7 +237,7 @@ a:hover{}
 #content .info-courses-box .list-info-courses .title-course {width:935px;height:92px;margin:10px 0;float:left;cursor:pointer;}
 #content .info-courses-box .list-info-courses .title-course .ui-accordion-header-icon {width:154px;height:92px;background:url(../img/layout/background-courses.png) no-repeat;float:left;clear:both;}
 #content .info-courses-box .list-info-courses .title-course img {margin:0 0 0 -480px;left:50%;position:absolute;}
-#content .info-courses-box .list-info-courses .title-course p {width:760px;height:76px;margin:5px 0 0 0;padding:0 0 0 20px;color:#107f41;font:22px/76px 'Days One', sans-serif;background:url(../img/layout/bg-repeat-courses.jpg) repeat-x;border-radius:10px;float:left;}
+#content .info-courses-box .list-info-courses .title-course p {width:760px;height:76px;margin:5px 0 0 0;padding:0 0 0 20px;color:#107f41;font:20px/76px 'Days One', sans-serif;background:url(../img/layout/bg-repeat-courses.jpg) repeat-x;border-radius:10px;float:left;}
 #content .info-courses-box .list-info-courses .content-course {width:760px;background:#eeefee;margin:-20px 0 0;padding:10px;border-radius:10px;float:right;}
 /*Página de Talentos*/
 #content .talents {width:900px;margin:0 20px 0 0;float:left;}
