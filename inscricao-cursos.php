@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>	
 			<section id="content">
+				<section class="top-banner-intern">
+					<img src="img/content/Interna_Cursos.jpg" alt="">
+				</section>
 				<section class="subscribe-courses">
 					<h2>Cursos</h2>
 					<h3>Inscrições</h3>

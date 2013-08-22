@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>	
 			<section id="content">
+				<section class="top-banner-intern">
+					<img src="img/content/Interna_QuemSomos.jpg" alt="">
+				</section>
 				<section class="univia">
 					<h2>Instituto Univia</h2>
 					<p>O Instituto Univia foi criado, inicialmente, para capacitar profissionais na área prática da logística. Após criteriosa análise de mercado, ficaram nítidas as dificuldades em executar atividades ligadas ao segmento. Presos, que se encontram, à teoria os profissionais não estavam aptos a atender as demandas práticas, gerando altos custos com treinamentos. Neste cenário, o INSTITUTO UNIVIA percebeu que a carência por expertise prática não se restringia apenas à esta área, e foi quando surgiram os novos núcleos: Tecnológico, Jurídico, Gestão de pessoas, entre outros. Todos com o mesmo compromisso: de trazer a experiência prática para dentro da sala de aula e fomentar o capital humano dentro das corporações.</p>

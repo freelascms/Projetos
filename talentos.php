@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>	
 			<section id="content">
+				<section class="top-banner-intern">
+					<img src="img/content/Interna_Talentos.jpg" alt="">
+				</section>
 				<section class="talents">
 					<h2>Talentos Univia</h2>
 					<h3>Área restrita para assinantes</h3>

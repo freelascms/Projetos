@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>	
 			<section id="content">
+				<section class="top-banner-intern">
+					<img src="img/content/Interna_Contato.jpg" alt="">
+				</section>
 				<section class="contact">
 					<h2>Contato</h2>
 					<h3>Fale Conosco</h3>

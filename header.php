@@ -53,20 +53,4 @@
 						</ul>
 					</nav>
 				</section>		
-				<section id="dg-container" class="dg-container">
-					<div class="dg-wrapper">
-						<a href="#"><img src="img/content/Excel-Avancado-Analista.jpg" alt="Excel Avançado"></a>
-						<a href="#"><img src="img/content/Gestao-Frota.jpg" alt="Gestão de Frota"></a>
-						<a href="#"><img src="img/content/Pratica-Trabalhista.jpg" alt="Prática Trabalhista"></a>
-					</div>
-					<nav>	
-						<span class="dg-prev">Anterior</span>
-						<span class="dg-next">Próxima</span>
-					</nav>
-				</section>
 			</header><!-- #header -->
-				<script type="text/javascript">
-			$(function() {
-				$('#dg-container').gallery();
-			});
-		</script/>

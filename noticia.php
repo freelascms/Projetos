@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>	
 			<section id="content">
+				<section class="top-banner-intern">
+					<img src="img/content/Interna_Noticias.jpg" alt="">
+				</section>
 				<section class="open-notice">
 					<h2>Notícias</h2>
 					<span>19/03/2013</span>

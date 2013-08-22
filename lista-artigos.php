@@ -1,5 +1,8 @@
 <?php include 'header.php'; ?>	
 			<section id="content">
+				<section class="top-banner-intern">
+					<img src="img/content/Interna_Artigos.jpg" alt="">
+				</section>
 				<section class="list-articles">
 					<h2>Todos os Artigos</h2>
 					<ul>

@@ -50,7 +50,7 @@ a{text-decoration:none;}
 a:hover{}
 
 /* Header */
-#header{width:100%;height:645px;background:url(../img/layout/bg-top.gif) repeat-x center top;float:left;}
+#header{width:100%;height:165px;background:url(../img/layout/bg-top.gif) repeat-x center top;float:left;}
 #header .header h1{width:290px;height:76px;margin:20px 0 0;background:url(../img/layout/img-logo.png) no-repeat;float:left;text-indent:-999em}
 #header .header h1 a{width:290px;height:76px;float:left;}
 #header .header {width:960px;height:125px;margin:18px auto 0;}
@@ -58,34 +58,14 @@ a:hover{}
 #header .header #nav ul li {padding:0 16px;float:left;}
 #header .header #nav ul li a {color:#107f41;font: 700 16px 'Roboto Slab',serif;float:left;text-transform:uppercase;}
 
-
-.dg-container{width: 100%;height: 540px;position: relative;overflow:hidden;}
-.dg-wrapper{width: 820px;height: 540px;margin: 0 auto;position: relative;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
-	-o-transform-style: preserve-3d;
-	-ms-transform-style: preserve-3d;
-	transform-style: preserve-3d;}
-.dg-wrapper a{width: 820px;height: 475px;display: block;position: absolute;left: 0;top:10px;background:url(../img/layout/bg-banner.png) repeat}
-.dg-wrapper a.dg-transition{
-	-webkit-transition: all 0.5s ease-in-out;
-	-moz-transition: all 0.5s ease-in-out;
-	-o-transition: all 0.5s ease-in-out;
-	-ms-transition: all 0.5s ease-in-out;
-	transition: all 0.5s ease-in-out;}
-.dg-wrapper a img{width: 780px;height:auto;display: block;padding:0;opacity:0.3;}
-.dg-wrapper a div{font-style: italic;text-align: center;line-height: 50px;text-shadow: 1px 1px 1px rgba(255,255,255,0.5);color: #333;font-size: 16px;width: 100%;bottom: -55px;display: none;position: absolute;}
-.dg-wrapper a.dg-center div{display: block;}
-.dg-wrapper a.dg-center {top:0!important;}
-.dg-center img {width: 820px!important;height: 498px!important;opacity:1!important;}
-.dg-container nav{width: 58px;position: absolute;z-index: 1000;bottom: 0;left: 50%;margin-left: -29px;}
-.dg-container nav span{float: left;cursor:pointer;width: 24px;height: 25px;opacity: 0.8;background: transparent url(../images/arrows.png) no-repeat top left;}
-.dg-container nav span:hover{opacity: 1;}
-
-.dg-container nav span.dg-prev{width:35px;height:35px;top:-265px;left:-420px;position:relative;background:url(../img/layout/arrow-prev-banner.png) no-repeat;text-indent:-999em;float:left;z-index:99}
-.dg-container nav span.dg-next{width:35px;height:35px;top:-290px;right:-420px;position:relative;background:url(../img/layout/arrow-next-banner.png) no-repeat;text-indent:-999em;float:right;z-index:99}
 /* Content */
-#content {width:960px;height:auto;margin:0 auto;}
+#content .top-banner-intern {width:940px;height:210px;margin:0 auto;}
+#content {width:960px;height:auto;margin:0 auto;clear:both;}
+.banner-home {width:940px;height:570px;border:10px solid #0e783a;margin:0 auto;clear:both;overflow:hidden;}
+.banner-home img {width:940px;height:auto;}
+.paginate-banner-home {width:auto;height:30px;margin:0 900px 0 0;top:-570px;left:50%;background:#d6d6d6;border-radius:10px;padding:0 10px;float:right;z-index:99;position:relative;}
+.paginate-banner-home a {width:19px;height:19px;margin:5px 5px 0 0;background:url(../img/layout/banner-no-select.png) no-repeat;text-indent:-999em;float:left;}
+.paginate-banner-home .activeSlide {width:21px;height:21px;margin:5px 5px 0 0;background:url(../img/layout/banner-select.png) no-repeat;text-indent:-999em;float:left;}
 /*Cursos - Home*/
 #content .courses {width:960px;height:440px;float:left;}
 #content .courses h2 {margin:45px 0 25px 0;color:#000;font:35px 'Days One', sans-serif;text-transform:uppercase;}
@@ -117,16 +97,16 @@ a:hover{}
 #content .team h3 {margin:15px 0 20px 0;color:#107f41;font:16px 'Days One', sans-serif;}
 #content .team p {width:220px;margin:0 0 15px 0;color:#1c1c1c;font:12px 'Verdana', sans-serif;float:right;}
 #content .team p span {font:700 12px 'Verdana', sans-serif;}
-#content .team .prev-team {width:23px;height:30px;top:-80px;left:70px;position:relative;background:url(../img/layout/ico-arrow-left.png) no-repeat;text-indent:-999em;float:left;z-index:99}
-#content .team .next-team {width:23px;height:30px;top:-80px;right:320px;position:relative;background:url(../img/layout/ico-arrow-right.png) no-repeat;text-indent:-999em;float:right;z-index:99}
+#content .team .prev-team {width:23px;height:30px;top:-160px;left:70px;position:relative;background:url(../img/layout/ico-arrow-left.png) no-repeat;text-indent:-999em;float:left;z-index:99}
+#content .team .next-team {width:23px;height:30px;top:-160px;right:320px;position:relative;background:url(../img/layout/ico-arrow-right.png) no-repeat;text-indent:-999em;float:right;z-index:99}
 /*Parceiros - Home*/
 #content .partners {width:960px;margin:0 0 0 10px;float:left;}
 #content .partners h2 {margin:45px 0 25px 0;color:#000;font:35px 'Days One', sans-serif;text-transform:uppercase;}
 #content .partners ul {width:100%;height:105px;margin:0 0 30px 0;float:left;}
 #content .partners ul li{width:970px;height:101px;float:left;}
 #content .partners ul li a {width:218px;height:101px;margin:0 20px 0 0;border:2px solid #bdbebe;border-radius:5px;float:left;}
-#content .partners .prev-partners {width:23px;height:30px;top:-90px;left:-25px;position:relative;background:url(../img/layout/ico-arrow-left.png) no-repeat;text-indent:-999em;float:left;}
-#content .partners .next-partners {width:23px;height:30px;top:-90px;right:-15px;position:relative;background:url(../img/layout/ico-arrow-right.png) no-repeat;text-indent:-999em;float:right;}
+#content .partners .prev-partners {width:23px;height:30px;top:-100px;left:-35px;position:relative;background:url(../img/layout/ico-arrow-left.png) no-repeat;text-indent:-999em;float:left;}
+#content .partners .next-partners {width:23px;height:30px;top:-100px;right:-15px;position:relative;background:url(../img/layout/ico-arrow-right.png) no-repeat;text-indent:-999em;float:right;}
 /*Página A Univia*/
 #content .univia {width:540px;margin:0 20px 0 0;float:left;}
 #content .univia h2 {margin:45px 0 25px 0;color:#000;font:35px 'Days One', sans-serif;text-transform:uppercase;}

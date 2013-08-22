@@ -45,6 +45,14 @@ $('.list-notices ul li, .list-articles ul li').hover(function(){
 	}, function(){
 	$(this).find('p').stop().animate({'color':'#107f41'}, 150);
 });
+
+	$('.banner-home').cycle({
+		timeout: 5000,
+        speed:  1000,
+        pager:  '.paginate-banner-home',
+		slideExpr: 'img'
+    });
+
 	$('.list-courses').cycle({ 
 	    fx:     'scrollHorz', 
 	    speed:  'slow', 
