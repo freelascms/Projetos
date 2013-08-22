@@ -1,10 +1,12 @@
 <?php include 'header.php'; ?>	
-			<section class="banner-home">
-				<a href="#"><img src="img/content/Excel-Avancado-Analista.jpg" alt="Excel Avançado"></a>
-				<a href="#"><img src="img/content/Gestao-Frota.jpg" alt="Gestão de Frota"></a>
-				<a href="#"><img src="img/content/Pratica-Trabalhista.jpg" alt="Prática Trabalhista"></a>
+			<section class="all-banner">
+				<nav class="paginate-banner-home"></nav>
+				<section class="banner-home">
+					<a href="#"><img src="img/content/Excel-Avancado-Analista.jpg" alt="Excel Avançado"></a>
+					<a href="#"><img src="img/content/Gestao-Frota.jpg" alt="Gestão de Frota"></a>
+					<a href="#"><img src="img/content/Pratica-Trabalhista.jpg" alt="Prática Trabalhista"></a>
+				</section>
 			</section>
-			<nav class="paginate-banner-home"></nav>
 			<section id="content">
 				<section class="courses">
 					<h2>Cursos</h2>	
